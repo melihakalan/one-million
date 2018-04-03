@@ -1,0 +1,292 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/milyonerb"
+    android:orientation="horizontal"
+    android:weightSum="1.0"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Game" >
+    
+    <LinearLayout 
+        android:id="@+id/game_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="0.30">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+	        <ImageView 
+	            android:id="@+id/game_jseyirci"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:scaleType="fitXY"
+	            android:adjustViewBounds="true"
+	            android:onClick="useGuests"
+	            android:background="@drawable/j_seyirci"/>
+	        <ImageView 
+	            android:id="@+id/game_jtelefon"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:scaleType="fitXY"
+	            android:adjustViewBounds="true"
+	            android:onClick="usePhone"
+	            android:background="@drawable/j_telefon"/>
+	        <ImageView 
+	            android:id="@+id/game_jyari"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:scaleType="fitXY"
+	            android:adjustViewBounds="true"
+	            android:onClick="useHalf"
+	            android:background="@drawable/j_yari"/>
+	        <ImageView 
+	            android:id="@+id/game_j2x"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:scaleType="fitXY"
+	            android:onClick="use2X"
+	            android:adjustViewBounds="true"
+	            android:visibility="gone"
+	            android:background="@drawable/j_2x"/>
+			<Button
+        		android:id="@+id/game_leave"
+		        android:layout_width="48dp"
+		        android:layout_height="24dp"
+		        android:layout_marginLeft="10dp"
+		        android:background="@drawable/button"
+		        android:textSize="12sp"
+		        android:textColor="#D8D8D8"
+		        android:textStyle="bold"
+		        android:text="Çekil"
+		        android:onClick="leaveGame" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/game_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/shape"
+            android:textSize="15sp"
+            android:textColor="#D8D8D8"
+            android:singleLine="false"
+            android:text="Başlıyor..." />
+        
+        <View android:layout_width="0dp" android:layout_height="5dp" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+            
+      		<TextView
+	            android:id="@+id/game_answerA"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="left"
+	            android:background="@drawable/shape"
+	            android:textSize="15sp"
+	            android:textColor="#D8D8D8"
+	            android:layout_weight="0.5"
+	            android:singleLine="true"
+	            android:onClick="selectAnswerA"
+	            android:clickable="true"
+	            android:text="" />    
+	            
+      		<View android:layout_width="5dp" android:layout_height="0dp" />
+	            
+      		<TextView
+	            android:id="@+id/game_answerB"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="left"
+	            android:background="@drawable/shape"
+	            android:textSize="15sp"
+	            android:textColor="#D8D8D8"
+	            android:layout_weight="0.5"
+	            android:singleLine="true"
+	            android:onClick="selectAnswerB"
+	            android:clickable="true"
+	            android:text="" /> 
+            
+        </LinearLayout>
+        
+        <View android:layout_width="0dp" android:layout_height="5dp" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+            
+      		<TextView
+	            android:id="@+id/game_answerC"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="left"
+	            android:background="@drawable/shape"
+	            android:textSize="15sp"
+	            android:textColor="#D8D8D8"
+	            android:layout_weight="0.5"
+	            android:singleLine="true"
+	            android:onClick="selectAnswerC"
+	            android:clickable="true"
+	            android:text="" />    
+	            
+      		<View android:layout_width="5dp" android:layout_height="0dp" />
+	            
+      		<TextView
+	            android:id="@+id/game_answerD"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="left"
+	            android:background="@drawable/shape"
+	            android:textSize="15sp"
+	            android:textColor="#D8D8D8"
+	            android:layout_weight="0.5"
+	            android:singleLine="true"
+	            android:onClick="selectAnswerD"
+	            android:clickable="true"
+	            android:text="" /> 
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <View android:layout_width="10dp" android:layout_height="0dp" />
+    
+    <LinearLayout 
+        android:id="@+id/game_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/right"
+        android:layout_weight="0.70">
+        
+        <TextView
+            android:id="@+id/game_money12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="12\t1.000.000 TL"
+            android:textColor="#D8D8D8" />
+        <TextView
+            android:id="@+id/game_money11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="11\t250.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="10\t125.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="9\t\t60.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="8\t\t30.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="7\t*\t15.000 TL"
+            android:textColor="#D8D8D8" />
+        <TextView
+            android:id="@+id/game_money6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="6\t*\t7.500 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="5\t*\t5.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="4\t*\t3.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="3\t*\t2.000 TL"
+            android:textColor="#DBA901" />
+        <TextView
+            android:id="@+id/game_money2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="2\t*\t1.000 TL"
+            android:textColor="#D8D8D8" />
+        <TextView
+            android:id="@+id/game_money1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="1\t*\t500 TL"
+            android:textColor="#DBA901" />
+        
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/milyonerb"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Home" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+		android:gravity="center" >
+        
+    <Button
+        android:id="@+id/home_start"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:background="@drawable/button"
+        android:textSize="15sp"
+        android:textColor="#D8D8D8"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="Baslat"
+        android:onClick="Start" />
+    
+    <View android:layout_width="0dp" android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/home_end"
+        android:layout_width="160dp"
+        android:layout_height="36dp"
+        android:background="@drawable/button"
+        android:textSize="15sp"
+        android:textColor="#D8D8D8"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="Kapat"
+        android:onClick="End" />
+    
+    <View android:layout_width="0dp" android:layout_height="20dp" />
+    
+    <com.startapp.android.publish.banner.Banner
+		android:id="@+id/startAppBanner"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+    
+    </LinearLayout>
+
+</LinearLayout>
